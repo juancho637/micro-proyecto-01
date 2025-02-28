@@ -15,9 +15,12 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "artillery run my-service-test.yml"
+    "test": "dotenv -e .env -- cross-env ARTILLERY_KEY=$ARTILLERY_KEY PROJECT_NAME=$PROJECT_NAME artillery run my-service-test.yml --name \"$PROJECT_NAME\" --record --key \"$ARTILLERY_KEY\""
   },
   "dependencies": {
     "artillery": "^2.0.22"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^8.0.0"
   }
 }
