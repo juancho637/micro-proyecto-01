@@ -1,0 +1,13 @@
+[Unit]
+Description=ConsulService Node Application
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=<%= @working_directory %>
+ExecStart=/usr/bin/node index.js 3000
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=multi-user.target

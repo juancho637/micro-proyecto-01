@@ -1,0 +1,12 @@
+[Unit]
+Description=Consul Agent Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/consul agent -ui -dev -bind=<%= @bind_address %> -client=<%= @client_address %> -dns-port=8600 -data-dir=/var/consul
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=multi-user.target
