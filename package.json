@@ -1,0 +1,23 @@
+{
+  "name": "01-micro-proyecto",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/juancho637/micro-proyecto-01#readme",
+  "bugs": {
+    "url": "https://github.com/juancho637/micro-proyecto-01/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juancho637/micro-proyecto-01.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "artillery run my-service-test.yml"
+  },
+  "dependencies": {
+    "artillery": "^2.0.22"
+  }
+}
